@@ -17,7 +17,7 @@ NAME = "AdaBoost + CatBoost"
 def run(X_tr, y_tr, X_te, label):
     ada = AdaBoostClassifier(
         estimator=DecisionTreeClassifier(max_depth=3),
-        n_estimators=50, random_state=42, algorithm='SAMME'
+        n_estimators=50, random_state=42
     )
     ada.fit(X_tr, y_tr)
     prob_tr = ada.predict_proba(X_tr)
