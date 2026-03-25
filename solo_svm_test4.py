@@ -14,7 +14,7 @@ from ctgan import CTGAN
 # ======================
 DATA_PATH    = "wustl-ehms-2020_with_attacks_categories.csv"
 LABEL_COL    = "Attack Category"
-TARGET       = 10_000
+TARGET       = 5_000
 MINORITY_THR = 10_000
 CTGAN_EPOCHS = 100
 CHUNK        = 500_000
@@ -94,8 +94,7 @@ y_bal = le.transform(df_balanced[LABEL_COL])
 # ======================
 # STANDARDISATION POUR SVM (données équilibrées)
 # ======================
-scaler_bal = StandardScaler()
-X_bal_scaled = scaler_bal.fit_transform(X_bal)
+X_bal_scaled = scaler.transform(X_bal)
 
 # ======================
 # SVM UNIQUEMENT
