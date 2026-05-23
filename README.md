@@ -1,4 +1,4 @@
-# IDS for IoMT based on AI
+# IDS for IoMT based on AI - Paper
 
 This project is about comparing different intrusion detection systems for IoMT which are based on machine learning and deep learning algorithms.
 
